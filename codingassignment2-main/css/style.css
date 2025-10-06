@@ -1,0 +1,96 @@
+/* 1) Global tidy */
+body {
+  font-family: Arial, sans-serif;
+  /* margin: 30px;  <-- remove this; let the container manage spacing */
+  line-height: 1.6;
+  color: #000;
+  background: #ffb59f;            /* move bg color here (no inline) */
+}
+
+/* Optional: center the whole page content */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+}
+
+/* 2) Headings */
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #4CAF50;
+  font-size: 40px;
+  text-align: center;
+  margin: 16px 0 20px;
+}
+h2 { color: #FF5722; font-family: "Pacifico", cursive; }
+fieldset, h3 { color: #FF5722; font-family: "Pacifico", cursive; }
+
+/* 3) Lists — fix the centered bullets issue */
+ul, ol {
+  margin: 0;                 /* let the card handle spacing */
+  padding-left: 50px;     /* space for bullets/numbers */
+  text-align: left;          /* <-- key: stop centering list text */
+  list-style-position: outside;
+}
+li {
+  color: #000;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+/* 4) Figure */
+figure { margin: 10px 0; text-align: center; }
+
+/* 5) Radios + fieldset */
+input[type="radio"] {
+  transform: scale(1.1);     /* size bump */
+  margin-right: 6px;
+  vertical-align: middle;
+}
+fieldset {
+  border: 1px solid #000;
+  border-radius: 100px;
+  padding: 12px 16px 14px;
+  max-width: 490px;          /* responsive cap instead of hard 500px */
+  background: rgba(255,255,255,0.15); /* subtle fill (optional) */
+  text-align: center;
+
+}
+legend { color: #000; font-weight: 500; padding: 0 4px; text-align: center; }
+fieldset label {
+  color: #000;
+  margin-right: 14px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* 6) Card look (reuse for all panels) */
+.card {
+  background: #f2d0a4;
+  border: 4px solid #b88746;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+/* 7) Rows / columns */
+.wrapper {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 24px 0;
+  /* justify-content: space-event;  <-- typo; remove */
+  /* use space-between/center only if you need it */
+}
+.wrapper > div {
+  flex: 1;                   /* equal columns by default */
+}
+
+/* If you want specific widths per row: */
+/* .box1, .box3 { flex: 0 0 45%; }  .box2, .box4 { flex: 1; } */
+
+/* 8) Horizontal rule */
+hr { border: 0; height: 1px; background: #8b7272; margin: 24px 0; }
+
+/* 9) Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .wrapper { flex-direction: column; }
+}
